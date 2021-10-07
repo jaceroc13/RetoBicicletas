@@ -1,11 +1,10 @@
 # Reto-Bicicletas
- IBM Student: Daniela Ramirez - Ivonne
 
-# Instalacion:
+## Instalacion:
 
 -> npm i -f
 
-# Iniciar:
+## Iniciar:
 
 -> npm start o ng serve
 
