@@ -6,6 +6,4 @@
 
 ## Iniciar:
 
--> npm start o ng serve
-
-#prueba
+-> npm start
