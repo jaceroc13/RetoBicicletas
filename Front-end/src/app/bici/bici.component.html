@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-md-5">
+       <div class="card">
+           <div class="card-body">
+               <form #biciForm="ngForm" (ngSubmit)="addBici(biciForm)">
+                   
+                <input type="hidden" name="_id" [(ngModel)]="biciService.selectedBici._id">
+
+                <div class="form-group">
+                   <input type="text" class="form-control" name="id" placeholder="Ingrese el id"
+                   [(ngModel)]="biciService.selectedBici.id"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="tipo" placeholder="Ingrese el tipo"
+                    [(ngModel)]="biciService.selectedBici.tipo"/>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="marca" placeholder="Ingrese el marca"
+                    [(ngModel)]="biciService.selectedBici.marca"/>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="color" placeholder="Ingrese el color"
+                    [(ngModel)]="biciService.selectedBici.color"/>
+                 </div>
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="estado" placeholder="Ingrese el estado"
+                    [(ngModel)]="biciService.selectedBici.estado"/>
+                 </div>
+                 <button class="btn btn-primary mr-2" (click)="resetForm(biciForm)">
+                     Clean
+                 </button>
+                 <button class="btn btn-secondary">
+                     Save
+                 </button>
+               </form>
+           </div>
+    </div>
+    </div>
+    <div class="col-md-8">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>marca</th>
+             <th>tipo</th>
+             <th>color</th>
+             <th>estado</th>
+             <th>operations</th>
+        </tr>
+    </thead>
+    <tbody>
+<tr *ngFor="let bici of biciService.bicis">
+    <td>{{bici.id}}</td>
+    <td>{{bici.marca}}</td>
+    <td>{{bici.tipo}}</td>
+    <td>{{bici.color}}</td>
+    <td>{{bici.estado}}</td>
+    <td>
+        <button class="btn btn-secondary btn-sm" (click)="editBici(bici)">
+            <i class="material-icons">edit</i>
+        </button>
+        <button class="btn btn-danger btn-sm" (click)="deleteBici(bici._id)">
+           <i class="material-icons">delete</i> 
+        </button>
+    </td>
+</tr>
+    </tbody>
+</table>
+    </div>
