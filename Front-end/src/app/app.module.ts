@@ -27,6 +27,8 @@ import { AuthService } from "./shared/services/auth.service";
 import { BiciComponent } from './bici/bici.component';
 import { HomeComponent } from './components/home/home.component';
 import { BicicletasComponent } from './components/bicicletas/bicicletas.component';
+import { CompetenciasComponent } from './components/competencias/competencias.component';
+import { RutasComponent } from './components/rutas/rutas.component';
 
 
 
@@ -41,7 +43,8 @@ import { BicicletasComponent } from './components/bicicletas/bicicletas.componen
     BiciComponent,
     HomeComponent,
     BicicletasComponent,
-
+    RutasComponent,
+    CompetenciasComponent,
   ],
   imports: [
     BrowserModule,

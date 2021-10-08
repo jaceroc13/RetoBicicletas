@@ -8,6 +8,8 @@ import { ForgotPasswordComponent } from '../../components/forgot-password/forgot
 import { VerifyEmailComponent } from '../../components/verify-email/verify-email.component';
 import {HomeComponent } from '../../components/home/home.component';
 import { AuthGuard } from "../../shared/guard/auth.guard";
+import { RutasComponent } from 'src/app/components/rutas/rutas.component';
+import { CompetenciasComponent } from 'src/app/components/competencias/competencias.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,8 +17,12 @@ const routes: Routes = [
   { path: 'register-user', component: SignUpComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'verify-email-address', component: VerifyEmailComponent }
+  { path: 'verify-email-address', component: VerifyEmailComponent },
+  { path: '', component:HomeComponent },
+  {path: 'rutas', component:RutasComponent},
+  {path: 'competencias', component:CompetenciasComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
