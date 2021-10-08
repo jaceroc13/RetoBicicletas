@@ -29,6 +29,8 @@ import { HomeComponent } from './components/home/home.component';
 import { BicicletasComponent } from './components/bicicletas/bicicletas.component';
 import { CompetenciasComponent } from './components/competencias/competencias.component';
 import { RutasComponent } from './components/rutas/rutas.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -44,6 +46,8 @@ import { RutasComponent } from './components/rutas/rutas.component';
     HomeComponent,
     BicicletasComponent,
     RutasComponent,
+    HeaderComponent,
+    FooterComponent,
     CompetenciasComponent,
   ],
   imports: [
