@@ -37,13 +37,12 @@ export class CrearProductoComponent implements OnInit {
   agregarProducto() {
 
     const PRODUCTO: Producto = {
-
-    
       color: this.productoForm.get('color')?.value,
       modelo: this.productoForm.get('modelo')?.value,
       longitud: this.productoForm.get('longitud')?.value,
       latitud: this.productoForm.get('latitud')?.value,
-     
+      usuario: "",
+      estado: false
     }
 
     console.log(PRODUCTO);

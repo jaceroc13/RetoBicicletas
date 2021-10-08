@@ -35,14 +35,14 @@ exports.obtenerProductos = async (req, res) => {
 exports.actualizarProducto = async (req, res) => {
 
     try {
-        const { id_firebase, color, modelo, longitud, latitud, estado } = req.body;
+        const { usuario, color, modelo, longitud, latitud, estado } = req.body;
         let producto = await Producto.findById(req.params.id);
 
         if(!producto) {
             res.status(404).json({ msg: 'No existe el producto' })
         }
 
-        producto.idfirebase = id_firebase;
+        producto.usuario = usuario;
         producto.color = color;
         producto.modelo = modelo;
         producto.longitud = longitud;

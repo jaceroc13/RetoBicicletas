@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const ProductoSchema = mongoose.Schema({
+
+    usuario: {
+        type: String,
+        required: false
+    },
     
     color: {
         type: String,
@@ -18,6 +23,10 @@ const ProductoSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    estado: {
+        type: Boolean,
+        default: false
+    }
   
 });
 

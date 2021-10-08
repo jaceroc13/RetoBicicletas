@@ -1,11 +1,21 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0"> 🚲 Alquiler de Bicicletas
-  </a>
-  <button>Home</button>
-  <button>Bicicletas</button>
-  <button>Alquiler</button>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand" href="#">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <button onclick="location.href='http://localhost:4201/'"  class="btn btn-outline-warning my-2 my-sm-0" type="submit">BICICLETAS</button>
+        </div>
+        <div class="navbar-nav">
+          <button onclick="location.href='http://localhost:4203/'"  class="btn btn-outline-info my-2 my-sm-0 ml-2" type="submit">MAPA</button>
+        </div>
+        <div class="navbar-nav">
+          <button onclick="location.href='http://localhost:4202/'"  class="btn btn-outline-danger my-2 my-sm-0 ml-2" type="submit">ALQUILER</button>
+        </div>
+    </div>
+    </nav>
 
 <!-- Sidebar navigation -->
 <div class="container-fluid">

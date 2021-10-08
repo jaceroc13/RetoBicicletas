@@ -129,7 +129,7 @@ export class AuthService {
 
 }
 
-export class BiciService { 
+export class BiciService {
   URL_API='http://localhost:4000/api/bicis'
 
   selectedBici: Bici ={
@@ -141,7 +141,7 @@ export class BiciService {
     _id:''
   };
 
-  bicis: Bici[] = []; 
+  bicis: Bici[] = [];
 
 constructor(private http: HttpClient){}
 
@@ -151,14 +151,15 @@ return this.http.get<Bici[]>(this.URL_API);
 
    createBici(bici: Bici){
 return this.http.post(this.URL_API, bici);
-   }  
+   }
 
 putBici(bici: Bici){
   return this.http.put(`${this.URL_API}/${bici._id}`,bici);
 }
 
-   deleteBici(_id: string){    
+   deleteBici(_id: string){
     return this.http.delete(`${this.URL_API}/${_id}`);
    }
-   
+
 }
+

@@ -67,8 +67,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cliente:build"
-          },
+          "browserTarget": "cliente:build",
+          "port": 4201
+         },
           "configurations": {
             "production": {
               "browserTarget": "cliente:build:production"
@@ -130,4 +131,5 @@
   "cli": {
     "analytics": "388806a7-4b7a-4237-980a-1eb1f5350a0d"
   }
+
 }

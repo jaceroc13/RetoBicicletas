@@ -1,41 +1,36 @@
-<div class="displayTable">
-  <div class="displayTableCell">
-
-    <div class="authBlock">
-      <h3> Ingresar</h3>
-      <div class="formGroup">
-        <input type="text" class="formControl" placeholder="Username" #userName required>
-      </div>
-
-      <div class="formGroup">
-        <input type="password" class="formControl" placeholder="Password" #userPassword required>
-      </div>
-
-      <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
-      </div>
-
-      <div class="formGroup">
-        <span class="or"><span class="orInner">O</span></span>
-      </div>
-
-      <!-- Calling GoogleAuth Api from AuthService -->
-      <div class="formGroup">
-        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-          <i class="fab fa-google-plus-g"></i>
-          Ingresar con Google
-        </button>
-      </div>
-
-      <div class="forgotPassword">
-        <span routerLink="/forgot-password">Olvido la contraseña?</span>
-      </div>
-    </div>
-
-    <div class="redirectToLogin">
-      <span>No tienes cuenta?<span class="redirect" routerLink="/register-user"> Registrarse</span></span>
-    </div>
-
+<div class="mt-5">
+  <h3 class="text-center">Ingresar</h3>
+</div>
+<hr/>
+<div class="row justify-content-center">
+<div class="col-12 col-sm-8 col-md-6 col-xl-4">
+  <input
+    type="email"
+    class="form-control mb-2"
+    placeholder="Ingrese un email"
+    #userName required
+  >
+  <input
+    type="password"
+    class="form-control mb-2"
+    placeholder="Ingrese un password"
+    #userPassword required
+  >
+  <div class="formGroup">
+    <input type="button" class="btn btn-dark btn-lg btn-block" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
   </div>
+  <div class="formGroup">
+    <button type="button" class="mt-1 btn btn-info btn-sm btn-block googleBtn" (click)="authService.GoogleAuth()">
+      <i class="fab fa-google-plus-g"></i>
+          Ingresar con Google
+    </button>
+  </div>
+  <div class="forgotPassword">
+    <button class="mt-1 btn btn-danger btn-sm btn-block " routerLink="/forgot-password">Recuperar contraseña</button>
+  </div>
+  <div class="text-center">
+    <span>¿No tienes cuenta?</span>
+      <span type="button" class="btn btn-link" routerLink="/register-user">Registrarse</span>
+  </div>
+</div>
 </div>
