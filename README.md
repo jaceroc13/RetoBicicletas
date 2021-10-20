@@ -1,5 +1,5 @@
 # Reto-Bicicletas
- IBM Student: Daniela Ramirez - Ivonne
+ IBM Student: 
 
 # Instalacion:
 
