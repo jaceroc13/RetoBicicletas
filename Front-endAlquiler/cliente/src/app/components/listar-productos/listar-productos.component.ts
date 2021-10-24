@@ -3,6 +3,9 @@ import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
+
+
+
 @Component({
   selector: 'app-listar-productos',
   templateUrl: './listar-productos.component.html',
@@ -11,8 +14,10 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class ListarProductosComponent implements OnInit {
   listProductos: Producto[] = [];
   
-  constructor(private _productoService: ProductoService,
-        private toastr: ToastrService) { }
+  constructor(
+    private _productoService: ProductoService,
+    private toastr: ToastrService,
+  ) { }
 
   ngOnInit(): void {
     this.obtenerProductos();
@@ -36,5 +41,7 @@ export class ListarProductosComponent implements OnInit {
       console.log(error);
     })
   }
+
+  
 
 }

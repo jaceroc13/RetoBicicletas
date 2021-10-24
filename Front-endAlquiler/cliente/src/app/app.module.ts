@@ -9,20 +9,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Componentes
 import { AppComponent } from './app.component';
-
-import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
-    ListarProductosComponent,
-   
     HeaderComponent,
-   
-    FooterComponent
+    FooterComponent,
+    ListarProductosComponent
   ],
   imports: [
     BrowserModule,
