@@ -18,7 +18,7 @@ export class AppComponent {
   });
 
   // Marker for the top of Mt. Ranier
-  summit = marker([ 46.8523, -121.7603 ], {
+  summit = marker([ 4.6488806822476825, -74.0773727356394 ], {
     icon: icon({
       iconSize: [ 25, 41 ],
       iconAnchor: [ 13, 41 ],
@@ -29,7 +29,7 @@ export class AppComponent {
   });
 
   // Marker for the parking lot at the base of Mt. Ranier trails
-  paradise = marker([ 46.78465227596462,-121.74141269177198 ], {
+  paradise = marker([ 4.697952468129998, -74.08579208007511 ], {
     icon: icon({
       iconSize: [ 25, 41 ],
       iconAnchor: [ 13, 41 ],
@@ -71,15 +71,15 @@ export class AppComponent {
   // Set the initial set of displayed layers (we could also use the leafletLayers input binding for this)
   options = {
     layers: [ this.streetMaps, this.route, this.summit, this.paradise ],
-    zoom: 7,
-    center: latLng([ 46.879966, -121.726909 ])
+    zoom: 12,
+    center: latLng([ 4.659797541364262, -74.0836333959878 ])
   };
 
-  onMapReady(map: Map) {
-    map.fitBounds(this.route.getBounds(), {
-      padding: point(24, 24),
-      maxZoom: 12,
-      animate: true
-    });
-  }
+  //onMapReady(map: Map) {
+  //  map.fitBounds(this.route.getBounds(), {
+  //    padding: point(24, 24),
+  //    maxZoom: 12,
+  //    animate: true
+  //  });
+  //}
 }
