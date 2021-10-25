@@ -1,7 +1,7 @@
 <div class="container mt-6">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card">
+    <div class="row mx-auto">
+        <div class="col-lg-9 offset-lg-2 mx-auto">
+            <div class="card mx-auto">
                 <div class="card-body text-center">
                     <span class="titulo">ALQUILER BICICLETAS</span>
 
@@ -16,6 +16,7 @@
                             <th scope="col">Longitud</th>
                             <th scope="col">Latitud</th>
                             <th scope="col">Estado</th>
+                            <th></th>
 
 
                           </tr>
@@ -30,7 +31,7 @@
                             <td>{{ producto.latitud }}</td>
                             <td>{{ producto.estado }}</td>
 
-                            <td><button  name="estado" class="btn btn-success float-end" estado.get>ALQUILAR</button></td>
+                            <td><button  name="estado" class="btn btn-success float-end" estado.get *ngIf="producto.estado == false">ALQUILAR</button></td>
 
 
                           </tr>

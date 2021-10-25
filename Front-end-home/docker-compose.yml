@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  frontendhome:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - '4200:4200'

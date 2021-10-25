@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CrearProductoComponent } from '../../../../Frot-end2/cliente/src/app/components/crear-producto/crear-producto.component';
+//import { CrearProductoComponent } from '../../../../Frot-end2/cliente/src/app/components/crear-producto/crear-producto.component';
+import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 
 // componentes
 import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
