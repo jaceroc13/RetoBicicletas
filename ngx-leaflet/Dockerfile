@@ -1,4 +1,4 @@
-FROM node:latest as build
+FROM node:lts-stretch-slim as build
 
 # Set the working directory
 WORKDIR /usr/local/app
